@@ -3,8 +3,8 @@ FROM sharkvan/devtools:latest
 MAINTAINER Tim Schruben <tim.schruben@gmail.com>
 
 ENV WORKDIR /project
-RUN sudo chown -R $USER:$USER /home/dev/
-RUN mkdir -p /home/dev/.vim/bundle 
+RUN sudo chown -R $USER:$USER $HOME
+RUN mkdir -p $HOME/.vim/bundle 
 RUN cd ~/.vim/bundle/ && \
     sudo git clone --depth 1 https://github.com/elixir-lang/vim-elixir
 
